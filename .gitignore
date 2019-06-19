@@ -173,4 +173,5 @@ typings/
 # End of https://www.gitignore.io/api/node,intellij
 
 package-lock.json
-
+.idea
+*.iml
