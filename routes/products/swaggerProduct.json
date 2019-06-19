@@ -1,0 +1,234 @@
+{
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Get all products in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ListProducts"
+            }
+          },
+          "204": {
+            "description": "No content",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "500": {
+            "description": "Error Internal Server",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Add new product in system",
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "Product that we want to create",
+            "schema": {
+              "$ref": "#/definitions/NewProduct"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "204": {
+            "description": "No content",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "500": {
+            "description": "Error Internal Server",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Update a product in system",
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "description": "Product that we want to create",
+            "schema": {
+              "$ref": "#/definitions/NewProduct"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id Product that we want to update",
+            "schema": {
+              "$ref": "#/definitions/NewProduct"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "204": {
+            "description": "No content",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "500": {
+            "description": "Error Internal Server",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Delete a product in system",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id Product that we want to update",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "204": {
+            "description": "No content",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          },
+          "500": {
+            "description": "Error Internal Server",
+            "schema": {
+              "$ref": "#/definitions/statusMessage"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ListProducts": {
+      "required": [
+        "status",
+        "data"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Products"
+        }
+      }
+    },
+    "Product": {
+      "required": [
+        "id",
+        "code",
+        "description",
+        "count"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        }
+      }
+    },
+    "NewProduct": {
+      "required": [
+        "code",
+        "description",
+        "count"
+      ],
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number"
+        }
+      }
+    },
+    "Products": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Product"
+      }
+    }
+  }
+}
