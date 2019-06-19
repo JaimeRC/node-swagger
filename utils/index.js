@@ -9,7 +9,7 @@ module.exports.success = (data) => {
 }
 
 
-module.exports.error = (message) => {
+module.exports.error = (message) =>  {
     let error = {status: "KO"}
     error.message = message
     return error
