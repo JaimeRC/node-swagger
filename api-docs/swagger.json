@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Documentation for a Node Api (Example)",
+    "title": "Structure of an API in NodeJS with Swagger documentation.",
     "description": "Show how requests for an api are documented ",
     "license": {
       "name": "MIT",
