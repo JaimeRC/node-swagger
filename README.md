@@ -24,3 +24,7 @@ Estructura de una API en NodeJS y documentación con Swagger.
 
 ### Modelos
 ![Example](./images/image2.png)
+
+
+## Licencia
+node-swagger bajo [MIT License](https://opensource.org/licenses/MIT)
