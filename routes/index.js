@@ -1,18 +1,19 @@
-const express = require('express'),
-    routes = express.Router(),
-    bodyParser = require('body-parser'),
-    jsonBodyParser = bodyParser.json()
+import express from 'express'
+import Routes from './controllers'
+import {serve, setup} from '../api-docs'
 
-const {getProduct, newProduct, updateProduct, deleteProduct} = require('./products')
+const Router = express.Router()
 
-
-routes.route('/products').get(getProduct)
-
-routes.route('/products').post([jsonBodyParser], newProduct)
-
-routes.route('/products/:id').put([jsonBodyParser], updateProduct)
-
-routes.route('/products/:id').delete(deleteProduct)
+/**
+ * Añadimos los Controladores de las rutas
+ */
+Router.use('/', Routes)
 
 
-module.exports = routes
+/**
+ * Ruta para acceder al entorno de Testeo Swagger
+ */
+Router.use('/api-docs', serve, setup)
+
+
+module.exports = Router

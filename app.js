@@ -1,12 +1,16 @@
-const express = require('express'),
-    routes = require('./routes'),
-    {server, setup} = require('./api-docs')
-
+import express from 'express'
+import Router from './routes'
 
 const app = express()
+const PORT = process.env.PORT || 9000
 
-app.use('/', routes)
+/**
+ * Añadimos las Rutas
+ */
+app.use(Router)
 
-app.use('/api-docs', server, setup)
 
-app.listen(9000, () => console.log(`Server running in port 9000`))
+/**
+ * Inicializamos el Servidor
+ */
+app.listen(PORT, () => console.log(`Servidor inicializado en el puerto 9000`))

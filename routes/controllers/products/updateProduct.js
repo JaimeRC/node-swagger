@@ -1,6 +1,12 @@
-const {success, error, products} = require('../../utils')
+import {success, error, products}  from '../../../utils'
 
-
+/**
+ * Peticion para actualizar un Producto
+ *
+ * @param req                   Peticion de entrada (Request)
+ * @param res                   Respuesta (Response)
+ * @returns {Promise<void>}
+ */
 module.exports = async (req, res) => {
     try {
 
