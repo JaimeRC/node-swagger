@@ -2,6 +2,22 @@
 
 Estructura de una API en NodeJS y documentación con Swagger.
 
+
+## Estructura del Proyecto
+
+    app.js                        # Archivo de inicializacion
+      ├───api-docs                # Documentación e configuración de Swagger
+      ├───config                  # Variable de entorno y constantes para el Proyecto
+      ├───data                    # Datos para el proyecto y Readme
+      ├───db                      # Conexión a las DBs
+      ├───routes                  # Rutas  
+      |     ├───controllers       # Controlladores para cada Ruta
+      |     └───middleware        # Filtros y complementos para las Rutas
+      ├───test                    # Archivos de Test
+      └───utils                   # Scripts de utilidades para el proyecto
+
+
+
 ## Instalación
 
 - Clona este repositorio: git clone https://github.com/JaimeRC/node-swagger.git`
@@ -15,12 +31,12 @@ Estructura de una API en NodeJS y documentación con Swagger.
 ## Imagenes
 
 ### Inicio
-![Example](./images/image0.png)
+![Example](data/images/image0.png)
 
 
 ### Petición
-![Example](./images/image1.png)
+![Example](data/images/image1.png)
 
 
 ### Modelos
-![Example](./images/image2.png)
+![Example](data/images/image2.png)
