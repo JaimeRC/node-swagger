@@ -20,7 +20,7 @@ Estructura de una API en NodeJS y documentación con Swagger.
 
 ## Instalación
 
-- Clona este repositorio: git clone https://github.com/JaimeRC/node-swagger.git`
+- Clona este repositorio: `git clone https://github.com/JaimeRC/node-swagger.git`
 - Ìnicializa el proyecto: 
     - `cd node-swagger`
     - `npm install --save`
@@ -39,4 +39,12 @@ Estructura de una API en NodeJS y documentación con Swagger.
 
 
 ### Modelos
+<<<<<<< HEAD
 ![Example](data/images/image2.png)
+=======
+![Example](./images/image2.png)
+
+
+## Licencia
+node-swagger bajo [MIT License](https://opensource.org/licenses/MIT)
+>>>>>>> b899dcf19a804fac5b8897cea1644929bdcefd42
